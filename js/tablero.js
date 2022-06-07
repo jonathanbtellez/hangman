@@ -10,9 +10,9 @@ var palabraAgregada = false;
 function nuevaPalabra(){
     var newPalabra = document.querySelector("#ingresar-palabra").value;
     var palabraSecreta = newPalabra.toUpperCase();
-    let reg = new RegExp("^[a-zA-Z ]*$", "g");
+    let reg = new RegExp("^[a-zA-Z ]*$\s", "g");
     if(!reg.test(palabraSecreta)){
-        alert("No se aceptan letras con caracteres especiales o numeros.");
+        alert("No se aceptan letras con caracteres especiales, espacios o numeros.");
     return}
     if (palabraSecreta.length < 3){
         alert("La palabra debe tener mas de 3 letras escriba otra palabra.")
