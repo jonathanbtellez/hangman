@@ -1,0 +1,311 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background:#2D2D2A;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*       Header           */
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    padding: 40px 20px;  
+    filter: hue-rotate(135deg);
+}
+
+header .hangman h1{
+    display: block;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 40px;
+    color: #C52233;
+}
+
+
+/*         Main     */
+
+
+.iniciar-juego{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+}
+
+.botones-inicio .iniciar-juego{
+    padding: 20px 60px;
+    margin:  200px auto;
+    display: block;
+    border-radius: 24px;
+    background-color:  #C52233;;
+    color: #2D2D2A;
+    font-size: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-color: #2D2D2A;
+}
+
+.botones-inicio .iniciar-juego:hover{
+    background: #d52233;
+}
+
+.botones-inicio .agregar-palabra{
+    padding: 18px 10px;
+    margin:  15% auto;    
+    display: block;
+    border-radius: 24px;
+    border-color:#C52233;
+    font-size: 16px;
+    color: #C52233;
+    cursor: pointer;
+    background: #2D2D2A;
+}
+
+.botones-inicio .agregar-palabra:hover{
+    background: #3D2D2A;
+}
+
+
+.agregar-nueva-palabra{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+
+.insertar-palabra-nueva .insertar-palabra{
+    min-width: 100%;
+    max-width: 1000px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 300px;
+    max-height: 300px;
+    padding: 20px;
+    display: block;
+    border: none;
+    font-size: 2em;
+    color: #C52233;
+    background: #2D2D2A;
+}
+
+
+.insertar-palabra::placeholder{
+    color: #C52233;
+}
+
+.botones-insertar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: auto;
+    width: 90;
+    max-width: 1000px;
+    justify-content: space-between;
+}
+
+.insertar-palabra-nueva .indicaciones{
+    width: 100%;
+    padding: 10px;
+    color: #C52233;
+}
+
+
+
+.insertar-palabra-nueva .guardar-palabra{
+    width: 45%;
+    padding: 15px 20px;
+    margin:  10px auto;    
+    display: inline-block;
+    border-radius: 24px;
+    border-color: none;
+    background:#C52233;
+    font-size: 16px;
+    color: #2D2D2A;
+    cursor: pointer;
+    border-color: #2D2D2A;
+}
+
+.insertar-palabra-nueva .guardar-palabra:hover{
+    background: #d52233;
+}
+
+.insertar-palabra-nueva .cancelar{
+    width: 45%;
+    padding: 15px 20px;
+    margin: auto;    
+    display: inline-block;
+    border-radius: 24px;
+    border-color:#C81D25;
+    font-size: 16px;
+    color: #C81D25;
+    cursor: pointer;
+    background: #2D2D2A;
+}
+
+.insertar-palabra-nueva .cancelar:hover{
+    background: #3D2D2A;
+}
+
+.tablero{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tablero .horca{
+    width: 100%;
+    max-width: 1000px; 
+}
+
+.botones-juego{    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.botones-juego .nuevo-juego{
+    width: 45%;
+    padding: 15px 20px;
+    margin: auto;    
+    display: inline-block;
+    border-radius: 24px;
+    background:#C52233;
+    font-size: 16px;
+    color: #2D2D2A;
+    cursor: pointer;
+    border-color: #2D2D2A;
+}
+.botones-juego .nuevo-juego:hover{
+    background: #d52233;
+}
+
+.botones-juego .desistir{
+    width: 45%;
+    padding: 15px 20px;
+    margin: auto;    
+    display: inline-block;
+    border-radius: 24px;
+    border-color:#C52233;
+    font-size: 16px;
+    color: #C52233;
+    cursor: pointer;
+    background: #2D2D2A;
+}
+
+.tablero .desistir:hover{
+    background: #3D2D2A;
+}
+
+/*           footer       */
+
+footer{
+    background: #C52233;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+footer .creado-por{
+    color: #2D2D2A;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer .redes-sociales a{
+    padding: 0 20px;
+    display: inline-block;
+    margin: 10px 15px;
+}
+footer .redes-sociales {
+    margin: 10px 15px;
+    
+}
+
+footer .redes-sociales .img{
+    filter: hue-rotate(135deg);
+}
+
+footer .redes-sociales .github:hover{
+    background: #2D2D2A;
+    border-radius: 10px;
+}
+
+footer .redes-sociales .linkedin:hover{
+    background: #2D2D2A;
+    border-radius: 10px;
+}
+
+.invisible{display:none;}
+
+@media screen and (max-width: 550px) {
+    body{
+        background: white;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header .hangman h1{
+        font-size: 2em;
+        padding: 15px;
+    }
+    header .logo{
+        padding: 15px;
+    }
+
+    .insertar-palabra-nueva .insertar-palabra{
+        width: 90%;
+        font-size: 1.5em;
+    }
+    .botones-insertar{ display:flex; flex-direction: column; margin-bottom: 5%;}
+    .botones-insertar .guardar-palabra {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .botones-insertar .cancelar {
+        width: 70%;
+    }
+    .tablero{flex-direction: column;}
+    .tablero .nuevo-juego{
+        width: 80%;      
+        margin-bottom: 5px;  
+    }
+    .tablero .desistir{
+        width: 70%;  
+        margin-bottom: 5px; 
+    }
+
+
+}
+
