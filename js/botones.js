@@ -8,7 +8,6 @@ var btnGuardarEmpezar = document.querySelector("#guardar-empezar");
 var btnCancelar = document.querySelector("#cancelar");
 var btnNuevoJuego = document.querySelector("#nuevo-juego");
 var btnDesistir=document.querySelector("#desistir");
-var btnletras = document.querySelector("#letra");
 
 
 

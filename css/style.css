@@ -13,7 +13,7 @@ body{
     margin: auto;
 }
 
-/*       Header           */
+/*   --------------  Header  --------------   */
 
 header{
     display: flex;
@@ -36,7 +36,7 @@ header .hangman h1{
 }
 
 
-/*         Main     */
+/*     ------------  Main  ----------   */
 
 
 .iniciar-juego{
@@ -222,7 +222,7 @@ header .hangman h1{
     background: #3D2D2A;
 }
 
-/*           footer       */
+/*   -------------- footer -----------      */
 
 footer{
     background: #C52233;
@@ -267,10 +267,9 @@ footer .redes-sociales .linkedin:hover{
 
 .invisible{display:none;}
 
+/* -------------Media Queries----------*/
+
 @media screen and (max-width: 550px) {
-    body{
-        background: white;
-    }
     header{
         display: flex;
         flex-direction: column;

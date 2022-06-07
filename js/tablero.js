@@ -1,4 +1,4 @@
-var palabras =["ALURA", "CSS", "HTML", "ORACLE","VARIABLE","BUCLE","ITERACION"];
+var palabras =["ALURA", "CSS", "HTML", "ORACLE","VARIABLE","BUCLE","ITERACION","COLOMBIA","BOGOTA","CORAZON","FELICIDAD","AMISTAD","PRESENTE","OLVIDO","SEGURIDAD","PRINCESA","CREACION","RECURSO","TIEMPO","PRUEBA","RETO","DESAFIO"];
 var tablero = document.querySelector("#tablero-juego").getContext("2d");
 var letras=[];
 var palabraCorrecta = "";
@@ -6,7 +6,7 @@ var errores = 9;
 var hit=0;
 var palabraAgregada = false;
 
-
+// Esta funcion agrega la nueva palabra
 function nuevaPalabra(){
     var newPalabra = document.querySelector("#ingresar-palabra").value;
     var palabraSecreta = newPalabra.toUpperCase();
@@ -20,7 +20,7 @@ function nuevaPalabra(){
     else{
         palabraAgregada = true;
         palabras.push(palabraSecreta);
-        alert(palabras);
+        //alert(palabras);
     return palabraSecreta;}
 }
 
@@ -30,7 +30,7 @@ function nuevaPalabra(){
 function escojerPalabraSecreta(){
     var palabra = palabras[Math.floor(Math.random() *palabras.length)]
     var palabraSecreta = palabra;
-    console.log(palabra);
+    //console.log(palabra);
     return palabraSecreta;
 }
 
@@ -114,7 +114,7 @@ function adicionarLetraIncorrecta(letter){
 //verificando si el jugador gano
 function haGanado (hit,palabraSecreta){
     if(hit == palabraSecreta.length){
-        alert("Felicidades a ganado!!")
+        alert("Felicidades a ganado!! TE ATREVES A INTENTAR DE NUEVO?")
     }
 }
 
@@ -128,7 +128,7 @@ document.onkeydown =(e) => {
             if(!verificarLetras(e.key)){
                 if(palabraSecreta.includes(letra)){
                     
-                    console.log(letra);
+                    //console.log(letra);
                     adicionarLetraCorrecta(palabraSecreta.indexOf(letra));
                 
                     for (var i=0; i<palabraSecreta.length;i++){
@@ -144,11 +144,9 @@ document.onkeydown =(e) => {
                     adicionarLetraIncorrecta(letra);
                     escribirLetraIncorrecta(letra,errores);
                 }
-                console.log(hit,palabraSecreta.length)
+                //console.log(hit,palabraSecreta.length)
                 }
             haGanado (hit,palabraSecreta);
-        }
-
-        
-
-}}
+        }  
+    }
+}
