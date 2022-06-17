@@ -46,7 +46,9 @@ btnCancelar.addEventListener("click", function(){
 
 //Envia al usuario a la pagina de inico para que escoja si desea jugar con una palabra o insertar una.
 btnNuevoJuego.addEventListener("click", function(){
-    location.reload();
+    tablero.clearRect(0,0,1200,800)
+    dibujarLinea(escojerPalabraSecreta());
+    juegoHorca();  
 })
 
 

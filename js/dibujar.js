@@ -5,6 +5,15 @@ function dibujarfigurasRect(color,a,b,c,d){
         tablero.strokeRect(a,b,c,d);
 }
 
+function dibujarCiculo(color,a,b,c,d,tamaño){
+    tablero.fillStyle = color;
+    tablero.beginPath();
+    tablero.arc(a,b,c,d,tamaño*3.14);
+    tablero.fill();
+}
+
+
+
 function dibujar (errores){
     if(errores == 8){
         dibujarfigurasRect("#1f1300",300,520,550,50);
@@ -19,22 +28,23 @@ function dibujar (errores){
         dibujarfigurasRect("#a5402d",680,170,15,80);
         alert("la letra pulsada no es parte de la palabra tiene disponibles " +errores+ " intentos");
     }else if(errores == 4){
-        dibujarfigurasRect("#f7b05b",680,270,10,80);
+        dibujarfigurasRect("#343F3E",670,265,20,80);
         alert("la letra pulsada no es parte de la palabra tiene disponibles " +errores+ " intentos");
     }else if(errores == 3){//dibujando circunferencia
-        tablero.fillStyle = "#f7b05b";
-        tablero.beginPath();
-        tablero.arc(660,260,35,0,2*3.14);
-        tablero.fill();
+        dibujarCiculo("#FFC8FB",660,260,35,0,2);
         alert("la letra pulsada no es parte de la palabra tiene disponibles " +errores+ " intentos");
     }else if(errores == 2){
-        dibujarfigurasRect("#f7b05b",690,285,8,70);
+        dibujarfigurasRect("#343F3E",680,350,9,70);
+        dibujarCiculo("#000",680,420,8,0,1);
         alert("la letra pulsada no es parte de la palabra tiene disponibles " +errores+ " intentos");
     }else if(errores == 1){
-        dibujarfigurasRect("#f7b05b",680,340,8,70);
+        dibujarfigurasRect("#343F3E",680,290,12,70);
+        dibujarCiculo("#f7b05b",685,354,8,0,1);
         alert("la letra pulsada no es parte de la palabra tiene disponibles " +errores+ " intentos");
     }else if(errores == 0){
         dibujarfigurasRect("#a5402d",660,290,40,10);
+        dibujarCiculo("#000",640,260,8,7,1);
+        dibujarCiculo("#000",645,289,8,10,2);
         alert("Ha perdido la palabra es: " +palabraSecreta);
     }
 }

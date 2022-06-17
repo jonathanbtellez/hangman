@@ -57,8 +57,6 @@ function dibujarLinea(palabra){
 }
 
 
-
-
 //Dibujando letras del ahorcado
 function escribirLetrasCorrectas(index){
     tablero.font="bold 52px inter";
@@ -114,23 +112,36 @@ function adicionarLetraIncorrecta(letter){
 //verificando si el jugador gano
 function haGanado (hit,palabraSecreta){
     if(hit == palabraSecreta.length){
-        alert("Felicidades a ganado!! TE ATREVES A INTENTAR DE NUEVO?")
+        alert("Felicidades a ganado!! TE ATREVES A INTENTAR DE NUEVO?");
     }
 }
 
+function haPerdido (errores){
+    if(errores == 0){
+        alert("Eres un HANGMAN.!\n TE ATREVES A INTENTAR DE NUEVO??");
+}}
+//creando nuevas variables para el juego
+function nuevasVariable(){
+    hit=0
+    errores=9
+    letras=[]
+}
 //hacer uso del teclado para validar letras
 
 function juegoHorca(){
-document.onkeydown =(e) => {
-    var letra = e.key.toUpperCase();
+    nuevasVariable();
+    document.onkeydown =(e) => {
+
+            
+         var letra = e.key.toUpperCase();
 
         if(errores !=0 && hit != palabraSecreta.length){
             if(!verificarLetras(e.key)){
                 if(palabraSecreta.includes(letra)){
-                    
+                            
                     //console.log(letra);
                     adicionarLetraCorrecta(palabraSecreta.indexOf(letra));
-                
+                        
                     for (var i=0; i<palabraSecreta.length;i++){
                         if (palabraSecreta[i]===letra){
                             escribirLetrasCorrectas(i);
@@ -140,13 +151,14 @@ document.onkeydown =(e) => {
                         }
                     }
                 }else{
-                    if(!verificarLetras(e.key))return 
+                if(!verificarLetras(e.key))return 
                     adicionarLetraIncorrecta(letra);
                     escribirLetraIncorrecta(letra,errores);
                 }
                 //console.log(hit,palabraSecreta.length)
-                }
+            }
             haGanado (hit,palabraSecreta);
+            setTimeout(haPerdido (errores),2000);
         }  
     }
 }
