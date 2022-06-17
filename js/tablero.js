@@ -1,4 +1,6 @@
-var palabras =["ALURA", "CSS", "HTML", "ORACLE","VARIABLE","BUCLE","ITERACION","COLOMBIA","BOGOTA","CORAZON","FELICIDAD","AMISTAD","PRESENTE","OLVIDO","SEGURIDAD","PRINCESA","CREACION","RECURSO","TIEMPO","PRUEBA","RETO","DESAFIO"];
+var palabras =["ALURA", "CSS", "HTML", "ORACLE","VARIABLE","BUCLE","ITERACION","COLOMBIA","BOGOTA","CORAZON",
+                "FELICIDAD","AMISTAD","PRESENTE","OLVIDO","SEGURIDAD","PRINCESA","CREACION","RECURSO","TIEMPO"
+                ,"PRUEBA","RETO","DESAFIO","ALMA","PACIENCIA","VACIO","COMPANIA","AVANZAR","VIDA","VICTORIA","IDEA"];
 var tablero = document.querySelector("#tablero-juego").getContext("2d");
 var letras=[];
 var palabraCorrecta = "";
@@ -8,11 +10,14 @@ var palabraAgregada = false;
 
 // Esta funcion agrega la nueva palabra
 function nuevaPalabra(){
+    var textarea = document.querySelector("textarea")
     var newPalabra = document.querySelector("#ingresar-palabra").value;
     var palabraSecreta = newPalabra.toUpperCase();
-    let reg = new RegExp("^[a-zA-Z ]*$\s", "g");
+    let reg = new RegExp("^[a-zA-Z\s]*$", "g");
     if(!reg.test(palabraSecreta)){
         alert("No se aceptan letras con caracteres especiales, espacios o numeros.");
+        textarea.value="";
+        textarea.focus();
     return}
     if (palabraSecreta.length < 3){
         alert("La palabra debe tener mas de 3 letras escriba otra palabra.")
@@ -85,7 +90,7 @@ function escribirLetraIncorrecta(letra,erroresleft){
 function verificarLetras(key){
     if(letras.length<1 || letras.indexOf(key)<0){
 
-        if (/[^a-z ]/.test(event.key)) {
+        if (!/^[a-zA-Z\s]*$/.test(event.key)) {
         return false;}
 
         letras.push(key);
@@ -112,13 +117,13 @@ function adicionarLetraIncorrecta(letter){
 //verificando si el jugador gano
 function haGanado (hit,palabraSecreta){
     if(hit == palabraSecreta.length){
-        alert("Felicidades a ganado!! TE ATREVES A INTENTAR DE NUEVO?");
+        alert("Felicidades a ganado!!\nTE ATREVES A INTENTAR DE NUEVO?");
     }
 }
 
 function haPerdido (errores){
     if(errores == 0){
-        alert("Eres un HANGMAN.!\n TE ATREVES A INTENTAR DE NUEVO??");
+        alert("Eres un HANGMAN!!\n TE ATREVES A INTENTAR DE NUEVO??");
 }}
 //creando nuevas variables para el juego
 function nuevasVariable(){
@@ -159,6 +164,7 @@ function juegoHorca(){
             }
             haGanado (hit,palabraSecreta);
             setTimeout(haPerdido (errores),2000);
+
         }  
     }
 }
