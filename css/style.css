@@ -15,11 +15,11 @@ body{
 
 /*   --------------  Header  --------------   */
 @keyframes opacidad{
-	0%{opacity: 1;}
+	0%{opacity: 0;}
     25%{opacity: .5;}
-	50%{opacity: 0;}
+	50%{opacity: 1;}
     75%{opacity: .5;}
-	100%{opacity: 1;}
+	100%{opacity: 0;}
 }
 
 
@@ -42,7 +42,7 @@ header .hangman h1{
     font-weight: bold;
     padding: 40px;
     color: #7b1e22;
-    animation:opacidad 10s ease infinite;
+    animation:opacidad 5s ease infinite;
 }
 
 
