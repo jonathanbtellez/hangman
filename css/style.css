@@ -4,7 +4,7 @@
 
 body{
     font-family: 'Times New Roman', Times, serif;
-    background:#2D2D2A;
+    background:#8D918B;
 }
 
 .contenedor{
@@ -14,6 +14,19 @@ body{
 }
 
 /*   --------------  Header  --------------   */
+@keyframes opacidad{
+	0%{opacity: 1;}
+    25%{opacity: .5;}
+	50%{opacity: 0;}
+    50%{opacity: .5;}
+	100%{opacity: 1;}
+}
+
+@keyframes color{
+	0%{color:#7b1e22;}
+	50%{color:#000;}
+	100%{color:#7b1e22;}
+}
 
 header{
     display: flex;
@@ -25,6 +38,7 @@ header{
 header .logo{
     padding: 40px 20px;  
     filter: hue-rotate(135deg);
+    animation:opacidad 5s ease infinite;
 }
 
 header .hangman h1{
@@ -32,7 +46,8 @@ header .hangman h1{
     font-size: 3em;
     font-weight: bold;
     padding: 40px;
-    color: #C52233;
+    color: #7b1e22;
+    animation:color 5s ease infinite;
 }
 
 
@@ -52,16 +67,16 @@ header .hangman h1{
     margin:  200px auto;
     display: block;
     border-radius: 24px;
-    background-color:  #C52233;;
-    color: #2D2D2A;
+    background-color:  #7b1e22;;
+    color: #8D918B;
     font-size: 20px;
     margin-bottom: 15px;
     cursor: pointer;
-    border-color: #2D2D2A;
+    border-color: #8D918B;
 }
 
 .botones-inicio .iniciar-juego:hover{
-    background: #d52233;
+    background: #9b1e22;
 }
 
 .botones-inicio .agregar-palabra{
@@ -69,15 +84,15 @@ header .hangman h1{
     margin:  15% auto;    
     display: block;
     border-radius: 24px;
-    border-color:#C52233;
+    border-color:#7b1e22;
     font-size: 16px;
-    color: #C52233;
+    color: #7b1e22;
     cursor: pointer;
-    background: #2D2D2A;
+    background: #8D918B;
 }
 
 .botones-inicio .agregar-palabra:hover{
-    background: #3D2D2A;
+    background: #9D918B;
 }
 
 
@@ -103,13 +118,13 @@ header .hangman h1{
     display: block;
     border: none;
     font-size: 2em;
-    color: #C52233;
-    background: #2D2D2A;
+    color: #7b1e22;
+    background: #8D918B;
 }
 
 
 .insertar-palabra::placeholder{
-    color: #C52233;
+    color: #7b1e22;
 }
 
 .botones-insertar{
@@ -125,7 +140,7 @@ header .hangman h1{
 .insertar-palabra-nueva .indicaciones{
     width: 100%;
     padding: 10px;
-    color: #C52233;
+    color: #7b1e22;
 }
 
 
@@ -137,15 +152,15 @@ header .hangman h1{
     display: inline-block;
     border-radius: 24px;
     border-color: none;
-    background:#C52233;
+    background:#7b1e22;
     font-size: 16px;
-    color: #2D2D2A;
+    color: #8D918B;
     cursor: pointer;
-    border-color: #2D2D2A;
+    border-color: #8D918B;
 }
 
 .insertar-palabra-nueva .guardar-palabra:hover{
-    background: #d52233;
+    background: #9b1e22;
 }
 
 .insertar-palabra-nueva .cancelar{
@@ -154,15 +169,15 @@ header .hangman h1{
     margin: auto;    
     display: inline-block;
     border-radius: 24px;
-    border-color:#C81D25;
+    border-color:#7b1e22;
     font-size: 16px;
-    color: #C81D25;
+    color: #7b1e22;
     cursor: pointer;
-    background: #2D2D2A;
+    background: #8D918B;
 }
 
 .insertar-palabra-nueva .cancelar:hover{
-    background: #3D2D2A;
+    background: #9D918B;
 }
 
 .tablero{
@@ -195,14 +210,14 @@ header .hangman h1{
     margin: auto;    
     display: inline-block;
     border-radius: 24px;
-    background:#C52233;
+    background:#7b1e22;
     font-size: 16px;
-    color: #2D2D2A;
+    color: #8D918B;
     cursor: pointer;
-    border-color: #2D2D2A;
+    border-color: #8D918B;
 }
 .botones-juego .nuevo-juego:hover{
-    background: #d52233;
+    background: #9b1e22;
 }
 
 .botones-juego .desistir{
@@ -211,15 +226,15 @@ header .hangman h1{
     margin: auto;    
     display: inline-block;
     border-radius: 24px;
-    border-color:#C52233;
+    border-color:#7b1e22;
     font-size: 16px;
-    color: #C52233;
+    color: #7b1e22;
     cursor: pointer;
-    background: #2D2D2A;
+    background: #8D918B;
 }
 
 .tablero .desistir:hover{
-    background: #3D2D2A;
+    background: #9D918B;
 }
 
 .botones-letras{
@@ -237,20 +252,20 @@ header .hangman h1{
     margin:4px;
     display: inline-block;
     border-radius: 24px;
-    border-color:#C52233;
+    border-color:#7b1e22;
     font-size: 16px;
-    color: #C52233;
+    color: #7b1e22;
     cursor: pointer;
-    background: #2D2D2A;
+    background: #8D918B;
 }
 
 .tablero .desistir:hover{
-    background: #3D2D2A;
+    background: #9D918B;
 }
 /*   -------------- footer -----------      */
 
 footer{
-    background: #C52233;
+    background: #7b1e22;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -259,11 +274,11 @@ footer{
 }
 
 footer .creado-por{
-    color: #2D2D2A;
+    color: #8D918B;
     text-align: center;
     padding: 10px;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: lighter;
 }
 
 footer .redes-sociales a{
@@ -276,17 +291,17 @@ footer .redes-sociales {
     
 }
 
-footer .redes-sociales .img{
-    filter: hue-rotate(135deg);
+footer .redes-sociales .github{
+    color: #000;
 }
 
 footer .redes-sociales .github:hover{
-    background: #2D2D2A;
+    background: #8D918B;
     border-radius: 10px;
 }
 
 footer .redes-sociales .linkedin:hover{
-    background: #2D2D2A;
+    background: #8D918B;
     border-radius: 10px;
 }
 

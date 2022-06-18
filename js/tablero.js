@@ -7,13 +7,13 @@ var palabraCorrecta = "";
 var errores = 9;
 var hit=0;
 var palabraAgregada = false;
+let reg = new RegExp("^[a-zA-Z\s]*$", "g");
 
 // Esta funcion agrega la nueva palabra
 function nuevaPalabra(){
     var textarea = document.querySelector("textarea")
     var newPalabra = document.querySelector("#ingresar-palabra").value;
     var palabraSecreta = newPalabra.toUpperCase();
-    let reg = new RegExp("^[a-zA-Z\s]*$", "g");
     if(!reg.test(palabraSecreta)){
         alert("No se aceptan letras con caracteres especiales, espacios o numeros.");
         textarea.value="";
@@ -47,7 +47,7 @@ function dibujarLinea(palabra){
     tablero.lineWidth=6;
     tablero.lineCap= "round";
     tablero.lineJoin= "round";
-    tablero.strokeStyle = "#C81D25";
+    tablero.strokeStyle = "#7b1e22";
     tablero.beginPath();
 
     var ancho =600/palabraSecreta.length;
@@ -68,7 +68,7 @@ function escribirLetrasCorrectas(index){
     tablero.lineWidth=6;
     tablero.lineCap= "round";
     tablero.lineJoin= "round";
-    tablero.fillStyle = "#C81D25";
+    tablero.fillStyle = "#7b1e22";
     
     var ancho =600/palabraSecreta.length;
     tablero.fillText(palabraSecreta[index],305+(ancho*index),620);
@@ -79,7 +79,7 @@ function escribirLetraIncorrecta(letra,erroresleft){
     tablero.lineWidth=6;
     tablero.lineCap= "round";
     tablero.lineJoin= "round";
-    tablero.fillStyle = "#C81D25";
+    tablero.fillStyle = "#7b1e22";
     tablero.fillText(letra, 335+(40*(10-erroresleft)),710 ,40);
 }
 
@@ -88,9 +88,9 @@ function escribirLetraIncorrecta(letra,erroresleft){
 //verificando las letras
 
 function verificarLetras(key){
-    if(letras.length<1 || letras.indexOf(key)<0){
-
-        if (!/^[a-zA-Z\s]*$/.test(event.key)) {
+    if(letras.length<1 || letras.indexOf(key)<0){	  
+       
+        if(!(/[A-ZÑ]/i.test(event.key))){
         return false;}
 
         letras.push(key);
