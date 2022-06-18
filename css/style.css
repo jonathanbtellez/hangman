@@ -18,15 +18,10 @@ body{
 	0%{opacity: 1;}
     25%{opacity: .5;}
 	50%{opacity: 0;}
-    50%{opacity: .5;}
+    75%{opacity: .5;}
 	100%{opacity: 1;}
 }
 
-@keyframes color{
-	0%{color:#7b1e22;}
-	50%{color:#000;}
-	100%{color:#7b1e22;}
-}
 
 header{
     display: flex;
@@ -38,7 +33,7 @@ header{
 header .logo{
     padding: 40px 20px;  
     filter: hue-rotate(135deg);
-    animation:opacidad 5s ease infinite;
+    animation:opacidad 10s ease infinite;
 }
 
 header .hangman h1{
@@ -47,7 +42,7 @@ header .hangman h1{
     font-weight: bold;
     padding: 40px;
     color: #7b1e22;
-    animation:color 5s ease infinite;
+    animation:opacidad 10s ease infinite;
 }
 
 
