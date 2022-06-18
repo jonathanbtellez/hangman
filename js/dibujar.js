@@ -31,7 +31,9 @@ function dibujar (errores){//Condicionales que dibujan el hangman en el codigo
         dibujarfigurasRect("#343F3E",670,265,20,80);
         alert("la letra pulsada no es parte de la palabra tiene disponibles " +errores+ " intentos");
     }else if(errores == 3){//dibujando circunferencia
-        dibujarCiculo("#FFC8FB",660,260,35,0,2);
+        dibujarCiculo("#f7b05b",660,260,35,0,2);
+        dibujarCiculo("#000",640,260,8,5,6);
+        dibujarCiculo("#000",645,289,8,10,2);
         alert("la letra pulsada no es parte de la palabra tiene disponibles " +errores+ " intentos");
     }else if(errores == 2){
         dibujarfigurasRect("#343F3E",680,350,9,70);
@@ -43,7 +45,8 @@ function dibujar (errores){//Condicionales que dibujan el hangman en el codigo
         alert("la letra pulsada no es parte de la palabra tiene disponibles " +errores+ " intentos");
     }else if(errores == 0){
         dibujarfigurasRect("#a5402d",660,290,40,10);
-        dibujarCiculo("#000",640,260,8,7,1);
+        dibujarCiculo("#FFC8FB",660,260,35,0,2);
+        dibujarfigurasRect("#000",635,260,7,0);
         dibujarCiculo("#000",645,289,8,10,2);
         alert("Ha perdido la palabra es: " +palabraSecreta);
     }
