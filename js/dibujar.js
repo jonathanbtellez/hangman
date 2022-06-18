@@ -1,11 +1,11 @@
-function dibujarfigurasRect(color,a,b,c,d){
+function dibujarfigurasRect(color,a,b,c,d){//crea las figura rectangulares del hangman
     tablero.fillStyle = color;
         tablero.fillRect(a,b,c,d);
         tablero.strokeStyle = "black";
         tablero.strokeRect(a,b,c,d);
 }
 
-function dibujarCiculo(color,a,b,c,d,tamaño){
+function dibujarCiculo(color,a,b,c,d,tamaño){//crea las figuras circulares del hangman
     tablero.fillStyle = color;
     tablero.beginPath();
     tablero.arc(a,b,c,d,tamaño*3.14);
@@ -14,7 +14,7 @@ function dibujarCiculo(color,a,b,c,d,tamaño){
 
 
 
-function dibujar (errores){
+function dibujar (errores){//Condicionales que dibujan el hangman en el codigo
     if(errores == 8){
         dibujarfigurasRect("#1f1300",300,520,550,50);
         alert("la letra pulsada no es parte de la palabra tiene disponibles " +errores+ " intentos");

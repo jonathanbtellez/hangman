@@ -17,8 +17,14 @@ btnComenzar.addEventListener("click", function(){
         botonesInicio.classList.remove("iniciar-juego");
         insertarPalabra.classList.add("invisible");
         tableroJuego.classList.remove("invisible");
+        mostrarTeclado()
         dibujarLinea(escojerPalabraSecreta());
-        juegoHorca();    
+        if(tecladoActivo){
+            juegoHorcaMovil();
+            location.reload;//reCARGA EL JUEGO ALA PAGINA DE INICIO EN LA VERCIO MOVIL
+        }else{
+        juegoHorca();
+        }
 })  
 
 //boton nueva palabra
@@ -31,12 +37,18 @@ btnNuevaPalabra .addEventListener("click", function(){
 
 //guarda nueva palabra y emperar
 btnGuardarEmpezar.addEventListener("click", function(){
+    mostrarTeclado();
     dibujarLinea(nuevaPalabra());
     if(palabraAgregada === true){   
         botonesInicio.classList.add("invisible");
         insertarPalabra.classList.add("invisible");
         tableroJuego.classList.remove("invisible");
-        juegoHorca();}
+        if(tecladoActivo){
+            juegoHorcaMovil();
+        }else{
+        juegoHorca();
+        }
+    }
 })
 
 //cancela la opcion de agregar una nueva palabra
@@ -46,9 +58,15 @@ btnCancelar.addEventListener("click", function(){
 
 //Envia al usuario a la pagina de inico para que escoja si desea jugar con una palabra o insertar una.
 btnNuevoJuego.addEventListener("click", function(){
+    mostrarTeclado();
     tablero.clearRect(0,0,1200,800)
     dibujarLinea(escojerPalabraSecreta());
-    juegoHorca();  
+    juegoHorca(); 
+    if(tecladoActivo){
+        location.reload();
+    }else{
+    juegoHorca();
+    }
 })
 
 
