@@ -7,13 +7,9 @@ var palabraCorrecta = "";
 var errores = 9;
 var hit=0;
 var palabraAgregada = false;
-<<<<<<< HEAD
 let reg = new RegExp("^[a-zA-Z\s]*$", "g");
-=======
 var gano = false;
 var perdio = false;
-
->>>>>>> cf05e20167134e6b5937e10ba70040c96be899af
 
 // Esta funcion agrega la nueva palabra
 function nuevaPalabra(){
