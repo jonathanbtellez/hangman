@@ -7,6 +7,9 @@ var palabraCorrecta = "";
 var errores = 9;
 var hit=0;
 var palabraAgregada = false;
+var gano = false;
+var perdio = false;
+
 
 // Esta funcion agrega la nueva palabra
 function nuevaPalabra(){
@@ -118,12 +121,14 @@ function adicionarLetraIncorrecta(letter){
 function haGanado (hit,palabraSecreta){
     if(hit == palabraSecreta.length){
         alert("Felicidades a ganado!!\nTE ATREVES A INTENTAR DE NUEVO?");
+        gano = true;
     }
 }
 
 function haPerdido (errores){
     if(errores == 0){
         alert("Eres un HANGMAN!!\n TE ATREVES A INTENTAR DE NUEVO??");
+        perdio = true;
 }}
 //creando nuevas variables para el juego
 function nuevasVariable(){
