@@ -49,11 +49,14 @@ function juegoHorcaMovil(tecla){//juego de la horca configurado a movil
                         }
                             //console.log(hit,palabraSecreta.length)
                     }
+                    haGanado (hit,palabraSecreta);
+                    setTimeout(haPerdido (errores),2000);   
+                    console.log(gano)
+                    if(gano||perdio){
+                        teclado.classList.add("invisible");
+                    }               
                 }
             })
-        } 
-        haGanado (hit,palabraSecreta);
-        setTimeout(haPerdido (errores),2000);   
-         
+        }  
     }
 }

@@ -62,7 +62,7 @@ btnNuevoJuego.addEventListener("click", function(){
     tablero.clearRect(0,0,1200,800)
     dibujarLinea(escojerPalabraSecreta());
     juegoHorca(); 
-    if(tecladoActivo){
+    if(tecladoActivo){  
         location.reload();
     }else{
     juegoHorca();
