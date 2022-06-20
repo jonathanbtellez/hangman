@@ -185,7 +185,8 @@ header .hangman h1{
 }
 
 .tablero .horca{
-    width: 100%;
+    width: 90%;
+    max-height: 80vh;
     max-width: 1000px; 
 }
 
